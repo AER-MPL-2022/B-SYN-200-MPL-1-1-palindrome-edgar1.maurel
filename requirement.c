@@ -12,3 +12,4 @@ int my_factrec_synthesis(int nb) {
         return (1);
     return (nb * my_factrec_synthesis(nb - 1));
 }
+
