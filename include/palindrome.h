@@ -8,6 +8,7 @@
 #pragma once
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
 typedef struct {
     int number;
@@ -15,6 +16,7 @@ typedef struct {
     int base;
     int max;
     int min;
+    int iteration;
 } palindrome_t;
 
 typedef struct {
@@ -26,11 +28,12 @@ typedef struct {
 } arguments_t;
 
 int my_strcmp(char *s1, char *s2);
-palindrome_t *create_palindrome_from_number(int number);
-palindrome_t *create_palindrome_from_palindrome(int palindrome);
 void destroy_palindrome(palindrome_t *palindrome);
 void error_message(char *message);
 void destroy_args(arguments_t *args);
 arguments_t *get_args(int argc, char **argv);
 int my_strlen(char *str);
 int my_getnbr(char *str);
+palindrome_t *create_palindrome(arguments_t *args);
+void generate_palindrome(palindrome_t *palindrome);
+int check_palindrome(int a);
