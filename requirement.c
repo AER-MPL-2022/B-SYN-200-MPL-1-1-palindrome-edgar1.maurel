@@ -13,3 +13,12 @@ int my_factrec_synthesis(int nb) {
     return (nb * my_factrec_synthesis(nb - 1));
 }
 
+
+int my_squareroot_synthesis(int nb) {
+    int i = 0;
+    while (i * i < nb)
+        i++;
+    if (i * i == nb)
+        return (i);
+    return (-1);
+}
