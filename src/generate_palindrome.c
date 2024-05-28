@@ -10,7 +10,7 @@
 void generate_palindrome(palindrome_t *palindrome)
 {
     int a = palindrome->number;
-    while (!check_palindrome(a, palindrome->base)) {
+    while (!check_palindrome(a, palindrome->base) || palindrome->iteration < palindrome->min) {
         int b = 0;
         int c = a;
         while (a != 0) {
@@ -30,7 +30,7 @@ void generate_palindrome(palindrome_t *palindrome)
 void generate_specific_palindrome(palindrome_t *palindrome)
 {
     int a = palindrome->number;
-    while (!check_palindrome(a, palindrome->base) || a != palindrome->palindrom_res) {
+    while (!check_palindrome(a, palindrome->base) || a != palindrome->palindrom_res || palindrome->iteration < palindrome->min) {
         int b = 0;
         int c = a;
         while (a != 0) {
