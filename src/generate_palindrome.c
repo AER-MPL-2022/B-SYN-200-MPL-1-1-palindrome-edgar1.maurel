@@ -22,7 +22,6 @@ void generate_palindrome(palindrome_t *palindrome)
         if (palindrome->iteration > palindrome->max)
             break;
     }
-    printf("a : %d\n", a);
     if (palindrome->iteration > palindrome->max)
         printf("no solution\n");
     palindrome->palindrom_res = a;

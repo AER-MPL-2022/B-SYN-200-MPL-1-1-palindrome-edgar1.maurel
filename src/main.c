@@ -17,7 +17,7 @@ int main(int argc, char **argv)
         printf("%d leads to %d in %d iteration(s) in base %d\n",
         palindrome->number, palindrome->palindrom_res, palindrome->iteration, palindrome->base);
     }
-    if (palindrome->palindrom_res != -1) {
+    else if (palindrome->palindrom_res != -1) {
         find_all_numbers(palindrome);
     }
 
