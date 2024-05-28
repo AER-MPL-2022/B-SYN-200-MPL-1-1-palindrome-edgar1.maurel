@@ -14,7 +14,8 @@ int main(int argc, char **argv)
 
     if (palindrome->number != -1) {
         generate_palindrome(palindrome);
-        printf("%d leads to %d in %d iteration(s) in base %d\n",
+        if (palindrome->palindrom_res != -1)
+            printf("%d leads to %d in %d iteration(s) in base %d\n",
         palindrome->number, palindrome->palindrom_res, palindrome->iteration, palindrome->base);
     }
     else if (palindrome->palindrom_res != -1) {

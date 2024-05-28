@@ -22,9 +22,11 @@ void generate_palindrome(palindrome_t *palindrome)
         if (palindrome->iteration > palindrome->max)
             break;
     }
-    if (palindrome->iteration > palindrome->max)
-        printf("no solution\n");
     palindrome->palindrom_res = a;
+    if (palindrome->iteration > palindrome->max) {
+        printf("no solution\n");
+        palindrome->palindrom_res = -1;
+    }
 }
 
 void generate_specific_palindrome(palindrome_t *palindrome)
