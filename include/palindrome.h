@@ -37,3 +37,4 @@ int my_getnbr(char *str);
 palindrome_t *create_palindrome(arguments_t *args);
 void generate_palindrome(palindrome_t *palindrome);
 int check_palindrome(int a, int base);
+void find_all_numbers(palindrome_t *palindrome);
