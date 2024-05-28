@@ -23,5 +23,7 @@ int my_getnbr(char *str)
         res = res * 10 + str[i] - '0';
         i++;
     }
+    if (sign < 0)
+        return -1;
     return (res * sign);
 }
