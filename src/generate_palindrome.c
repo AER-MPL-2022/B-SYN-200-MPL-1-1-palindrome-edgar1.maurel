@@ -44,9 +44,10 @@ void generate_specific_palindrome(palindrome_t *palindrome)
         if (palindrome->iteration > palindrome->max)
             break;
     }
-    if (palindrome->iteration > palindrome->max)
-        palindrome->palindrom_res = -1;
     palindrome->palindrom_res = a;
+    if (palindrome->iteration > palindrome->max) {
+        palindrome->palindrom_res = -1;
+    }
 }
 
 void find_all_numbers(palindrome_t *palindrome)
