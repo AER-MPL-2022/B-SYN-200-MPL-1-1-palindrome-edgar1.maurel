@@ -10,12 +10,12 @@
 void generate_palindrome(palindrome_t *palindrome)
 {
     int a = palindrome->number;
-    while (!check_palindrome(a)) {
+    while (!check_palindrome(a, palindrome->base)) {
         int b = 0;
         int c = a;
         while (a != 0) {
-            b = b * 10 + a % 10;
-            a = a / 10;
+            b = b * palindrome->base + a % palindrome->base;
+            a = a / palindrome->base;
         }
         a = c + b;
         palindrome->iteration++;

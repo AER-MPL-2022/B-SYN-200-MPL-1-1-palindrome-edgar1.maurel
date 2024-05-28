@@ -36,4 +36,4 @@ int my_strlen(char *str);
 int my_getnbr(char *str);
 palindrome_t *create_palindrome(arguments_t *args);
 void generate_palindrome(palindrome_t *palindrome);
-int check_palindrome(int a);
+int check_palindrome(int a, int base);

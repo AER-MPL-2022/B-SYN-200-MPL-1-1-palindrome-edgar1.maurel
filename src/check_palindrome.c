@@ -7,14 +7,14 @@
 
 #include "palindrome.h"
 
-int check_palindrome(int a)
+int check_palindrome(int a, int base)
 {
     int b = 0;
     int c = a;
 
     while (a != 0) {
-        b = b * 10 + a % 10;
-        a = a / 10;
+        b = b * base + a % base;
+        a = a / base;
     }
     if (c == b)
         return (1);
